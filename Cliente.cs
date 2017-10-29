@@ -13,8 +13,6 @@ namespace Banco
     public long Telefono {get; set;}
 
     public string email {get; set;}
-
-    public Cuenta cuentaCliente {get; set;}
      
     }
 }
