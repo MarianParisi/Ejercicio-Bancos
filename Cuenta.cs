@@ -7,12 +7,18 @@ namespace Banco
     public long CBU {get; set;}
     public decimal Saldo {get; set;}
     
-    public decimal depositar ( decimal montoDepostito){
-        decimal Saldo = Saldo + montoDepostito;
+    public Cliente Titular {get; set;}
+    public decimal depositar ( decimal montoDeposito){
+        decimal nuevoSaldo = Saldo + montoDeposito;
+        nuevoSaldo = Saldo;
+        return Saldo;
+    }
+    public decimal retirar ( decimal montoDeposito){
+        decimal nuevoSaldo = Saldo - montoDeposito;
+        nuevoSaldo = Saldo;
         return Saldo;
 
     }
-
     
     }
 }
