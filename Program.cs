@@ -13,9 +13,12 @@ namespace Banco
             NuevoCliente.Telefono= 46876770;
             
             Cuenta NuevaCuenta = new Cuenta ();
+            NuevaCuenta.Titular=NuevoCliente;
             NuevaCuenta.Saldo=2000;
-            decimal NuevoSaldo= NuevaCuenta.depositar (1500);
-            Console.WriteLine ("El saldo de tu cuenta es: " + NuevoSaldo);
+            Console.WriteLine ("El saldo de tu cuenta es: " + NuevaCuenta.retirar (1500));
+            Console.WriteLine(NuevaCuenta.Titular.nombreCompleto);
+            Console.WriteLine ("El saldo de tu cuenta es: " + NuevaCuenta.depositar (200));
+            
         }
     }
 }
