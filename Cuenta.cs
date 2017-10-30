@@ -9,11 +9,13 @@ namespace Banco
     // en caso de que hay un solo titular
     // public Cliente Titular {get; set;}
     public List<Cliente> Titulares { get; set; }
+    public List<Operacion> Operaciones {get;set;}
     public decimal depositar ( decimal montoDeposito){
        /* Saldo = Saldo + montoDeposito;
         return Saldo;*/
         this.Saldo += montoDeposito;
         return this.Saldo;
+        this.Operaciones.Add(new Operacion {montoDeposito = cantidad, Fecha =DateTime.Now, Tipo="Deposito"})
     }
     public virtual decimal retirar ( decimal montoDeposito){
 
