@@ -1,5 +1,5 @@
 using System;
-
+using System.Collections.Generic;
 namespace Banco
 {
     public class Cuenta
@@ -7,17 +7,14 @@ namespace Banco
     public long CBU {get; set;}
     public decimal Saldo {get; set;}
     
-    public Cliente Titular {get; set;}
+    public List<string> titulares { get; set; }
     public decimal depositar ( decimal montoDeposito){
-        decimal nuevoSaldo = Saldo + montoDeposito;
-        nuevoSaldo = Saldo;
+        Saldo = Saldo + montoDeposito;
         return Saldo;
     }
-    public decimal retirar ( decimal montoDeposito){
-        decimal nuevoSaldo = Saldo - montoDeposito;
-        nuevoSaldo = Saldo;
+    public virtual decimal retirar ( decimal montoDeposito){
+        Saldo = Saldo - montoDeposito;
         return Saldo;
-
     }
     
     }
